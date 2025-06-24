@@ -1,59 +1,40 @@
 # Mastra AI Tools Integration Example
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/mastra-ai/mastra)
-[![License: ISC](https://img.shields.io/badge/license-ISC-blue.svg)](./LICENSE)
-
 ## Overview
 
-**Mastra AI Tools Integration Example** demonstrates how to seamlessly integrate third-party developer tools (like Google Send Mail via Arcade.dev) into AI agents using the [Mastra AI](https://docs.mastra.ai/) framework. The project’s vision is to make it easy for developers to connect external APIs and services to their AI agents, enabling rapid prototyping and robust automation.
-
----
+**Mastra AI Tools Integration Example** demonstrates how to seamlessly integrate third-party developer tools (like Google Send Mail via Arcade.dev) into AI agents using the [Mastra AI](https://mastra.ai/) framework. The project's vision is to make it easy for developers to connect external APIs and services to their AI agents, enabling rapid prototyping and robust automation.
 
 ## How It Works
 
-This project uses Mastra AI’s agent and tool abstractions to connect to third-party APIs. For example, it integrates Google’s Send Mail tool using [Arcade.dev](https://arcade.dev/), allowing agents to send emails programmatically. The architecture is modular, so you can add more tools (e.g., GitHub API, Composio integrations) as needed.
-
-### High-Level Architecture
-
-```mermaid
-graph TD
-    User-->|Input (email, password)| MastraAgent
-    MastraAgent-->|Tool Call| ToolLayer
-    ToolLayer-->|API Call| ThirdPartyAPI
-    ThirdPartyAPI-->|Response| ToolLayer
-    ToolLayer-->|Result| MastraAgent
-    MastraAgent-->|Output| User
-```
-
----
+This project uses Mastra AI's agent and tool abstractions to connect to third-party APIs. For example, it integrates Google's Send Mail tool using [Arcade.dev](https://www.arcade.dev/), allowing agents to send emails programmatically. The architecture is modular, so you can add more tools (e.g., GitHub API, Composio integrations) as needed.
 
 ## Environment Variables
 
 The following environment variables are required:
 
-| Variable   | Description                                 | How to Obtain                |
-|------------|---------------------------------------------|------------------------------|
-| `USER_ID`  | Arcade.dev user ID for tool authorization   | From your Arcade.dev account |
+| Variable        | Description                                       | How to Obtain                |
+|-----------------|---------------------------------------------------|------------------------------|
+| `USER_ID`       | Arcade.dev user ID for tool authorization         | From your Arcade.dev account |
+|`ARCADE_API_KEY` | Arcade.dev API Key for application authentication | From your Arcade.dev account |
 
-> Create a `.env` file in the project root and add:
-> ```
-> USER_ID=your_arcade_user_id
-> ```
+Create a `.env` file in the project root and add:
 
----
+```env
+USER_ID=your_arcade_user_id
+```
 
 ## Setup Instructions
 
 ### 1. Clone the Repository
 
-```sh
-git clone https://github.com/your-org/mastra-with-ai-tools.git
-cd mastra-with-ai-tools
+```bash
+git clone https://github.com/your-org/mastra-ai-tool-examples.git
+cd mastra-ai-tool-examples
 ```
 
 ### 2. Install Dependencies
 
-```sh
+```bash
 npm install
 ```
 
@@ -67,24 +48,15 @@ USER_ID=your_arcade_user_id
 
 ### 4. Run the App Locally
 
-```sh
+```bash
 npm run dev
 ```
-
-### 5. Build and Start (Production)
-
-```sh
-npm run build
-npm start
-```
-
----
 
 ## Tool Integration Examples
 
 ### Google Send Mail (via Arcade.dev)
 
-The project integrates Google’s Send Mail tool using Arcade.dev. See `src/mastra/call/index.ts`:
+The project integrates Google's Send Mail tool using Arcade.dev. See `src/mastra/call/index.ts`:
 
 ```typescript
 import Arcade from "@arcadeai/arcadejs";
@@ -112,48 +84,28 @@ export const passwordResetCall = async (email, newPassword) => {
 };
 ```
 
----
-
 ## Adding More Integrations
 
-You can add more tools by following the pattern in `src/mastra/tools/index.ts` and using platforms like [Arcade.dev](https://arcade.dev/) or [Composio](https://composio.dev/).
+You can add more tools by following the pattern in `src/mastra/tools/index.ts` and using platforms like [Arcade.dev](https://www.arcade.dev/) or [Composio](https://composio.dev/).
 
----
+## Requirements
+
+- Node.js v20.9.0 or higher
+
+## Available Scripts
+
+- `npm run dev` — Start in development mode
 
 ## Documentation
 
-- [Mastra AI Documentation](https://docs.mastra.ai/)
+- [Mastra AI Documentation](https://mastra.ai/en/docs)
 - [Arcade.dev Documentation](https://docs.arcade.dev/)
 - [Composio Documentation](https://docs.composio.dev/)
-- [Google Send Mail Tool](https://arcade.dev/tools/google-send-email)
-
----
+- [Google Send Mail Tool](https://docs.arcade.dev/toolkits/productivity/google/gmail#googlesendemail)
 
 ## Contributing
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-If you’d like to add a new tool integration, improve documentation, or report a bug, open an issue or pull request.
+If you'd like to add a new tool integration, improve documentation, or report a bug, open an issue or pull request.
 
----
-
-## License
-
-This project is licensed under the ISC License.
-
----
-
-## Community & Support
-
-- [Mastra AI Discord](https://discord.gg/mastra)
-- [GitHub Discussions](https://github.com/mastra-ai/mastra/discussions)
-
----
-
-## Additional Notes
-
-- Node.js v20.9.0 or higher is required.
-- Useful scripts:
-  - `npm run dev` — Start in development mode
-  - `npm run build` — Build the project
-  - `npm start` — Start in production mode
