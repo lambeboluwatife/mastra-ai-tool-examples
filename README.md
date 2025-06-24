@@ -11,25 +11,14 @@
 
 This project uses Mastra AI's agent and tool abstractions to connect to third-party APIs. For example, it integrates Google's Send Mail tool using [Arcade.dev](https://arcade.dev/), allowing agents to send emails programmatically. The architecture is modular, so you can add more tools (e.g., GitHub API, Composio integrations) as needed.
 
-### High-Level Architecture
-
-```mermaid
-graph TD
-    User-->|Input (email, password)| MastraAgent
-    MastraAgent-->|Tool Call| ToolLayer
-    ToolLayer-->|API Call| ThirdPartyAPI
-    ThirdPartyAPI-->|Response| ToolLayer
-    ToolLayer-->|Result| MastraAgent
-    MastraAgent-->|Output| User
-```
-
 ## Environment Variables
 
 The following environment variables are required:
 
-| Variable   | Description                                 | How to Obtain                |
-|------------|---------------------------------------------|------------------------------|
-| `USER_ID`  | Arcade.dev user ID for tool authorization   | From your Arcade.dev account |
+| Variable        | Description                                       | How to Obtain                |
+|-----------------|---------------------------------------------------|------------------------------|
+| `USER_ID`       | Arcade.dev user ID for tool authorization         | From your Arcade.dev account |
+|`ARCADE_API_KEY` | Arcade.dev API Key for application authentication | From your Arcade.dev account |
 
 Create a `.env` file in the project root and add:
 
@@ -42,8 +31,8 @@ USER_ID=your_arcade_user_id
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/mastra-with-ai-tools.git
-cd mastra-with-ai-tools
+git clone https://github.com/your-org/mastra-ai-tool-examples.git
+cd mastra-ai-tool-examples
 ```
 
 ### 2. Install Dependencies
@@ -64,13 +53,6 @@ USER_ID=your_arcade_user_id
 
 ```bash
 npm run dev
-```
-
-### 5. Build and Start (Production)
-
-```bash
-npm run build
-npm start
 ```
 
 ## Tool Integration Examples
@@ -116,8 +98,6 @@ You can add more tools by following the pattern in `src/mastra/tools/index.ts` a
 ## Available Scripts
 
 - `npm run dev` — Start in development mode
-- `npm run build` — Build the project
-- `npm start` — Start in production mode
 
 ## Documentation
 
