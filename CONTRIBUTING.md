@@ -8,8 +8,8 @@ Thank you for your interest in contributing to this project! Your help is greatl
 - Click the "Fork" button at the top right of the repository page.
 - Clone your fork to your local machine:
   ```sh
-  git clone https://github.com/your-username/mastra-with-ai-tools.git
-  cd mastra-with-ai-tools
+  git clone https://github.com/lambeboluwatife/mastra-ai-tool-examples.git
+  cd mastra-ai-tool-examples
   ```
 
 ### 2. Create a Branch
@@ -41,16 +41,13 @@ Thank you for your interest in contributing to this project! Your help is greatl
 - Provide constructive feedback and be open to suggestions.
 
 ## Reporting Issues
-- Use the [GitHub Issues](https://github.com/your-org/mastra-with-ai-tools/issues) page to report bugs or request features.
+- Use the [GitHub Issues](https://github.com/lambeboluwatife/mastra-ai-tool-examples/issues) page to report bugs or request features.
 - Please provide as much detail as possible, including steps to reproduce and relevant logs or screenshots.
 
 ## Development Setup
 - See the [README.md](./README.md) for setup instructions.
 - Node.js v20.9.0 or higher is required.
 - Use `npm run dev` to start the app in development mode.
-
-## Community & Support
-- Join the [Mastra AI Discord](https://discord.gg/mastra) for discussions and support.
 
 ---
 
