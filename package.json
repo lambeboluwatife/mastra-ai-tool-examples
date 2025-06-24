@@ -1,0 +1,33 @@
+{
+  "name": "mastra-with-ai-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mastra dev",
+    "build": "mastra build",
+    "start": "mastra start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^1.2.19",
+    "@arcadeai/arcadejs": "^1.8.1",
+    "@mastra/core": "^0.10.6",
+    "@mastra/libsql": "^0.10.3",
+    "@mastra/loggers": "^0.10.2",
+    "@mastra/memory": "^0.10.4",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "mastra": "^0.10.6",
+    "typescript": "^5.8.3"
+  }
+}
