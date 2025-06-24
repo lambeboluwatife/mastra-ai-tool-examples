@@ -28,7 +28,7 @@ USER_ID=your_arcade_user_id
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/mastra-ai-tool-examples.git
+git clone https://github.com/lambeboluwatife/mastra-ai-tool-examples.git
 cd mastra-ai-tool-examples
 ```
 
