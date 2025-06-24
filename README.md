@@ -1,8 +1,5 @@
 # Mastra AI Tools Integration Example
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/mastra-ai/mastra)
-[![License: ISC](https://img.shields.io/badge/license-ISC-blue.svg)](./LICENSE)
-
 ## Overview
 
 **Mastra AI Tools Integration Example** demonstrates how to seamlessly integrate third-party developer tools (like Google Send Mail via Arcade.dev) into AI agents using the [Mastra AI](https://docs.mastra.ai/) framework. The project's vision is to make it easy for developers to connect external APIs and services to their AI agents, enabling rapid prototyping and robust automation.
@@ -101,10 +98,10 @@ You can add more tools by following the pattern in `src/mastra/tools/index.ts` a
 
 ## Documentation
 
-- [Mastra AI Documentation](https://docs.mastra.ai/)
+- [Mastra AI Documentation]([https://docs.mastra.ai/](https://mastra.ai/en/docs))
 - [Arcade.dev Documentation](https://docs.arcade.dev/)
 - [Composio Documentation](https://docs.composio.dev/)
-- [Google Send Mail Tool](https://arcade.dev/tools/google-send-email)
+- [Google Send Mail Tool]([https://arcade.dev/tools/google-send-email](https://docs.arcade.dev/toolkits/productivity/google/gmail#googlesendemail))
 
 ## Contributing
 
@@ -112,13 +109,3 @@ We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for 
 
 If you'd like to add a new tool integration, improve documentation, or report a bug, open an issue or pull request.
 
-## License
-
-This project is licensed under the ISC License.
-
-## Community & Support
-
-- [Mastra AI Discord](https://discord.gg/mastra)
-- [GitHub Discussions](https://github.com/mastra-ai/mastra/discussions)
-
-For any questions or support, join our Discord or open a discussion on GitHub!
