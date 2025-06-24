@@ -2,11 +2,11 @@
 
 ## Overview
 
-**Mastra AI Tools Integration Example** demonstrates how to seamlessly integrate third-party developer tools (like Google Send Mail via Arcade.dev) into AI agents using the [Mastra AI]([https://docs.mastra.ai/](https://mastra.ai/)) framework. The project's vision is to make it easy for developers to connect external APIs and services to their AI agents, enabling rapid prototyping and robust automation.
+**Mastra AI Tools Integration Example** demonstrates how to seamlessly integrate third-party developer tools (like Google Send Mail via Arcade.dev) into AI agents using the [Mastra AI](https://mastra.ai/) framework. The project's vision is to make it easy for developers to connect external APIs and services to their AI agents, enabling rapid prototyping and robust automation.
 
 ## How It Works
 
-This project uses Mastra AI's agent and tool abstractions to connect to third-party APIs. For example, it integrates Google's Send Mail tool using [Arcade.dev]([https://arcade.dev/](https://www.arcade.dev/)), allowing agents to send emails programmatically. The architecture is modular, so you can add more tools (e.g., GitHub API, Composio integrations) as needed.
+This project uses Mastra AI's agent and tool abstractions to connect to third-party APIs. For example, it integrates Google's Send Mail tool using [Arcade.dev](https://www.arcade.dev/), allowing agents to send emails programmatically. The architecture is modular, so you can add more tools (e.g., GitHub API, Composio integrations) as needed.
 
 ## Environment Variables
 
@@ -86,7 +86,7 @@ export const passwordResetCall = async (email, newPassword) => {
 
 ## Adding More Integrations
 
-You can add more tools by following the pattern in `src/mastra/tools/index.ts` and using platforms like [Arcade.dev]([https://arcade.dev/](https://www.arcade.dev/)) or [Composio](https://composio.dev/).
+You can add more tools by following the pattern in `src/mastra/tools/index.ts` and using platforms like [Arcade.dev](https://www.arcade.dev/) or [Composio](https://composio.dev/).
 
 ## Requirements
 
@@ -98,10 +98,10 @@ You can add more tools by following the pattern in `src/mastra/tools/index.ts` a
 
 ## Documentation
 
-- [Mastra AI Documentation]([https://docs.mastra.ai/](https://mastra.ai/en/docs))
+- [Mastra AI Documentation](https://mastra.ai/en/docs)
 - [Arcade.dev Documentation](https://docs.arcade.dev/)
 - [Composio Documentation](https://docs.composio.dev/)
-- [Google Send Mail Tool]([https://arcade.dev/tools/google-send-email](https://docs.arcade.dev/toolkits/productivity/google/gmail#googlesendemail))
+- [Google Send Mail Tool](https://docs.arcade.dev/toolkits/productivity/google/gmail#googlesendemail)
 
 ## Contributing
 
