@@ -36,6 +36,24 @@ export const sendMail = async ({ toolInput }) => {
   return result;
 };
 
+export const searchGoogle = async ({ toolInput }) => {
+  const client = new Arcade();
+
+  const result = await client.tools.execute({
+    tool_name: "Search.SearchGoogle@1.4.0",
+    input: {
+      owner: "ArcadeAI",
+      name: "arcade-ai",
+      starred: "true",
+      query: toolInput.query,
+      n_results: toolInput.n_results || 5,
+    },
+    user_id: USER_ID,
+  });
+
+  return result;
+};
+
 export const passwordResetCall = async (email: string, newPassword: string) => {
   const url = 'https://brightlife-enhancement.onrender.com/api/admin/reset-password';
   const body = {
