@@ -2,7 +2,7 @@ import { google } from '@ai-sdk/google';
 import { Agent } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
-import { resetPasswordTool, sendMailTool } from '../tools';
+import { resetPasswordTool, searchGoogleTool, sendMailTool } from '../tools';
 
 export const resetPasswordAgent = new Agent({
   name: 'Reset Password Agent',
@@ -34,4 +34,29 @@ export const resetPasswordAgent = new Agent({
     }),
   }),
 });
+
+export const searchAgent = new Agent({
+  name: 'Search Agent',
+  instructions: `
+      You are a helpful assistant that helps users find information online.
+
+      Your primary function is to assist users in finding information through web searches. When responding:
+      - Always ask for the user's search query if not provided
+      - If the user provides a vague query, ask for more specific details
+      - If the user asks for help with searching, provide tips on how to formulate effective queries
+      - Use the searchGoogleTool to perform searches
+      - Provide clear, concise summaries of search results
+      - If no results are found, inform the user politely and suggest alternative queries
+      - Always confirm when a search is completed successfully
+      - Use a friendly and professional tone
+      - Keep responses concise but informative  
+`,
+  model: google("gemini-2.0-flash-exp"),
+  tools: { searchGoogleTool },
+  memory: new Memory({
+    storage: new LibSQLStore({
+      url: 'file:../mastra.db',
+    }),
+  }),
+})
 
